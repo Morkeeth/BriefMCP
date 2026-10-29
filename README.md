@@ -65,15 +65,15 @@ Published npm package providing MCP tools:
 
 ## 🎯 The Problem
 
-Teams waste **2+ hours per week** searching for information and **88% of AI tokens** by copy-pasting entire documents into prompts. Different AI agents make inconsistent decisions because they don't share the same knowledge base.
+Teams repeatedly search for project information and paste large documents into prompts. Different AI agents can make inconsistent decisions when they work from different project context. This repository does not include a controlled measurement of time saved or token reduction.
 
 ## 💡 The Solution
 
 BRIEFMCP indexes your project's constitution and specifications into an optimized knowledge base, then uses **RAG (Retrieval Augmented Generation)** to retrieve only the most relevant sections. AI agents get exact constraints, requirements, and decisions; with citations; under a token budget.
 
 **Key Benefits:**
-- 🚀 **88% token reduction** - Retrieve 200 tokens instead of 10,000
-- ⚡ **< 2 seconds** search response time
+- **Budgeted retrieval** - Return selected excerpts rather than an entire document; the reduction depends on the query and document.
+- **Search latency** - Measure response time in the configured environment; no current latency benchmark is established here.
 - 🔒 **Multi-tenant** - Secure, isolated workspaces per organization
 - 🔌 **Zero-install** - Works with Claude, Cursor, GitHub Copilot via MCP
 
@@ -123,8 +123,8 @@ BRIEFMCP indexes your project's constitution and specifications into an optimize
 
 ```bash
 # Clone the repository
-git clone https://github.com/martinbon39/parisinnovhack.git
-cd parisinnovhack
+git clone https://github.com/Morkeeth/BriefMCP.git
+cd BriefMCP
 
 # Install dependencies
 npm install
@@ -211,7 +211,7 @@ This project was built for the Paris Innov Hackathon. Contributions welcome!
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
+The earlier README named MIT, but this checkout does not include a root LICENSE file. Confirm the applicable terms before reuse.
 
 ## 🔗 Links
 
