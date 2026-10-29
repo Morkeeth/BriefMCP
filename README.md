@@ -1,6 +1,11 @@
 # BRIEFMCP
 
-> **AI-powered knowledge base that gives every AI agent on your team the same, up-to-date project context—without copy-pasting massive markdown files.**
+**BriefMCP gives every AI agent on your team the same up-to-date project context through MCP, so nobody pastes a thousand-line spec into a prompt again.**
+
+Developers paste whole PRDs into prompts, and different assistants on one project make conflicting decisions because each works from a different context.
+For teams that use several AI coding assistants on one codebase.
+It indexes your project's constitution and specs into a Supabase pgvector knowledge base and serves cited, token-budgeted excerpts through MCP tools (`search-context`, `add-knowledge`, `list-knowledge`, `delete-knowledge`) to Claude, Cursor or Copilot.
+Built at the Paris Innovation Hackathon 2026 as a three-repo project; this repo is the frontend. Full pitch on Devpost: https://devpost.com/software/briefmcp
 
 **[📋 Devpost – Full hackathon pitch, solution context & screenshots](https://devpost.com/software/briefmcp)**
 
