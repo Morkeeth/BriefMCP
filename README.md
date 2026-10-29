@@ -1,6 +1,26 @@
 # BRIEFMCP
 
-> **AI-powered knowledge base that gives every AI agent on your team the same, up-to-date project context—without copy-pasting massive markdown files.**
+## TLDR
+
+Give a team's AI assistants a shared knowledge base through MCP.<br>
+For developers who need project context without repeatedly pasting whole specifications.<br>
+This repository is the frontend of the hackathon project; the linked repositories supply the other components.
+
+[📋 Devpost – Full hackathon pitch, solution context & screenshots](https://devpost.com/software/briefmcp)
+
+## The problem and approach
+
+Developers paste whole PRDs into prompts, and different assistants on one project make conflicting decisions because each works from a different context.
+It indexes your project's constitution and specs into a Supabase pgvector knowledge base and serves cited, token-budgeted excerpts through MCP tools (`search-context`, `add-knowledge`, `list-knowledge`, `delete-knowledge`) to Claude, Cursor or Copilot.
+Built at the Paris Innovation Hackathon 2026 as a three-repo project; this repo is the frontend. Full pitch on Devpost: https://devpost.com/software/briefmcp
+
+## Review and pick up the work
+
+[LOCAL_SETUP.md](LOCAL_SETUP.md) · [Agent guide](AGENTS.md)
+
+Start with the linked source, setup and evidence. Recorded demos and sample data keep their original scope; use the repository instructions for a fresh run.
+
+> **AI-powered knowledge base that gives every AI agent on your team the same, up-to-date project context; without copy-pasting massive markdown files.**
 
 **[📋 Devpost – Full hackathon pitch, solution context & screenshots](https://devpost.com/software/briefmcp)**
 
@@ -45,15 +65,15 @@ Published npm package providing MCP tools:
 
 ## 🎯 The Problem
 
-Teams waste **2+ hours per week** searching for information and **88% of AI tokens** by copy-pasting entire documents into prompts. Different AI agents make inconsistent decisions because they don't share the same knowledge base.
+Teams repeatedly search for project information and paste large documents into prompts. Different AI agents can make inconsistent decisions when they work from different project context. This repository does not include a controlled measurement of time saved or token reduction.
 
 ## 💡 The Solution
 
-BRIEFMCP indexes your project's constitution and specifications into an optimized knowledge base, then uses **RAG (Retrieval Augmented Generation)** to retrieve only the most relevant sections. AI agents get exact constraints, requirements, and decisions—with citations—under a token budget.
+BRIEFMCP indexes your project's constitution and specifications into an optimized knowledge base, then uses **RAG (Retrieval Augmented Generation)** to retrieve only the most relevant sections. AI agents get exact constraints, requirements, and decisions; with citations; under a token budget.
 
 **Key Benefits:**
-- 🚀 **88% token reduction** - Retrieve 200 tokens instead of 10,000
-- ⚡ **< 2 seconds** search response time
+- **Budgeted retrieval** - Return selected excerpts rather than an entire document; the reduction depends on the query and document.
+- **Search latency** - Measure response time in the configured environment; no current latency benchmark is established here.
 - 🔒 **Multi-tenant** - Secure, isolated workspaces per organization
 - 🔌 **Zero-install** - Works with Claude, Cursor, GitHub Copilot via MCP
 
@@ -103,8 +123,8 @@ BRIEFMCP indexes your project's constitution and specifications into an optimize
 
 ```bash
 # Clone the repository
-git clone https://github.com/martinbon39/parisinnovhack.git
-cd parisinnovhack
+git clone https://github.com/Morkeeth/BriefMCP.git
+cd BriefMCP
 
 # Install dependencies
 npm install
@@ -191,7 +211,7 @@ This project was built for the Paris Innov Hackathon. Contributions welcome!
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
+The earlier README named MIT, but this checkout does not include a root LICENSE file. Confirm the applicable terms before reuse.
 
 ## 🔗 Links
 
@@ -207,10 +227,14 @@ MIT License - see LICENSE file for details
 - **Local Setup & Project Analysis:** [LOCAL_SETUP.md](./LOCAL_SETUP.md) – internal: auth troubleshooting, env vars, base schema, build mode, what's missing
 - **MCP Package:** [npm - parisinnov-mcp](https://www.npmjs.com/package/parisinnov-mcp)
 - **Pitch Document:** [PITCH.md](./PITCH.md)
-- **MCP Usage Guide:** [MCP_USAGE_GUIDE.md](./MCP_USAGE_GUIDE.md)
-- **Constitution & Spec-Driven Design:** [CONSTITUTION_SPEC_DRIVEN_DESIGN.md](./CONSTITUTION_SPEC_DRIVEN_DESIGN.md)
-- **Core Value Proposition:** [CORE_VALUE_PROPOSITION.md](./CORE_VALUE_PROPOSITION.md)
+- **MCP Usage Guide:** MCP_USAGE_GUIDE.md (not included in this checkout)
+- **Constitution & Spec-Driven Design:** CONSTITUTION_SPEC_DRIVEN_DESIGN.md (not included in this checkout)
+- **Core Value Proposition:** CORE_VALUE_PROPOSITION.md (not included in this checkout)
 
 ---
 
 **Built with ❤️ for the Paris Innov Hackathon**
+
+## License and data boundaries
+
+This checkout has no root license file establishing general reuse rights. Data, provider responses, media, fonts and other third-party assets may have separate terms. Repository access alone does not grant rights to those materials. 
